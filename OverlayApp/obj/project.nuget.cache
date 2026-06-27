@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vU6TAT/UzSU=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\C#\\OverlayApp\\OverlayApp\\OverlayApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lu\\.nuget\\packages\\microsoft.web.webview2\\1.0.3240.44\\microsoft.web.webview2.1.0.3240.44.nupkg.sha512",
+    "C:\\Users\\Lu\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "C:\\Users\\Lu\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
