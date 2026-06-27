@@ -257,8 +257,8 @@ public partial class MainWindow : Window
 
         var iconImage = new WpfImage
         {
-            Width = 32,
-            Height = 32,
+            Width = 24,
+            Height = 24,
             Margin = new Thickness(0, 0, 0, 4),
             Source = icon ?? CreateDefaultIcon()
         };
@@ -284,8 +284,8 @@ public partial class MainWindow : Window
         var btn = new WpfButton
         {
             Style = (Style)FindResource("AppCardStyle"),
-            Width = 80,
-            Height = 80,
+            Width = 60,
+            Height = 60,
             Margin = new Thickness(4),
             Content = stack,
             Tag = app,

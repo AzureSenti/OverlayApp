@@ -141,9 +141,7 @@
 
                     <!-- App Icon & Title -->
                     <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14,0,0,0" VerticalAlignment="Center">
-                        <Ellipse Width="10" Height="10" Fill="{StaticResource PrimaryBrush}" Margin="0,0,4,0" />
-                        <Ellipse Width="10" Height="10" Fill="{StaticResource SuccessBrush}" Margin="0,0,4,0" />
-                        <Ellipse Width="10" Height="10" Fill="#FFC107" Margin="0,0,12,0" />
+
                         <TextBlock Text="OverlayApp"
                                    Foreground="{StaticResource TextBrush}"
                                    FontSize="13"
@@ -176,7 +174,7 @@
             </Border>
 
             <!-- ===== SEARCH BAR ===== -->
-            <Border Grid.Row="1" Padding="14,10,14,6">
+            <Border Grid.Row="1" Padding="14,5,14,0">
                 <TextBox x:Name="SearchBox"
                          Style="{StaticResource SearchTextBoxStyle}"
                          KeyDown="SearchBox_KeyDown"
@@ -184,7 +182,7 @@
             </Border>
 
             <!-- ===== APP LIST ===== -->
-            <Border Grid.Row="2" Padding="14,6,14,8">
+            <Border Grid.Row="2" Padding="14,6,14,4">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -197,7 +195,7 @@
                                Foreground="{StaticResource TextSecondaryBrush}"
                                FontSize="12"
                                FontWeight="SemiBold"
-                               Margin="0,0,0,8" />
+                               Margin="0,0,0,4" />
 
                     <!-- App Cards Scroll -->
                     <ScrollViewer Grid.Row="1"
@@ -208,8 +206,8 @@
                             <!-- Capture Window Button (Crosshair) -->
                             <Button x:Name="CaptureWindowBtn"
                                     Style="{StaticResource AddAppButtonStyle}"
-                                    Width="80" Height="80"
-                                    Margin="4"
+                                    Width="60" Height="60"
+                                    Margin="2"
                                     ToolTip="Drag and drop onto a window to embed it"
                                     PreviewMouseLeftButtonDown="CaptureWindowBtn_PreviewMouseLeftButtonDown"
                                     PreviewMouseMove="CaptureWindowBtn_PreviewMouseMove"
@@ -217,10 +215,10 @@
                                     Cursor="Cross">
                                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False">
                                     <TextBlock Text="🎯"
-                                               FontSize="24"
+                                               FontSize="12"
                                                HorizontalAlignment="Center" />
                                     <TextBlock Text="Capture"
-                                               FontSize="10"
+                                               FontSize="12"
                                                HorizontalAlignment="Center"
                                                Margin="0,2,0,0" />
                                 </StackPanel>
@@ -229,13 +227,13 @@
                             <!-- Add App Button (always last) -->
                             <Button x:Name="AddAppButton"
                                     Style="{StaticResource AddAppButtonStyle}"
-                                    Width="80" Height="80"
+                                    Width="60" Height="60"
                                     Margin="4"
                                     Click="AddApp_Click"
                                     ToolTip="Add application (.exe)">
                                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <TextBlock Text="+"
-                                               FontSize="28"
+                                               FontSize="22"
                                                FontWeight="Light"
                                                HorizontalAlignment="Center" />
                                     <TextBlock Text="Add"
@@ -251,7 +249,7 @@
 
             <!-- ===== TABBED EMBEDDED AREA ===== -->
             <Border Grid.Row="3"
-                    Margin="14,4,14,8"
+                    Margin="14,0,14,8"
                     CornerRadius="10"
                     BorderBrush="{StaticResource BorderBrush}"
                     BorderThickness="1"
