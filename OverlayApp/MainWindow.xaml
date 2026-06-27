@@ -205,7 +205,26 @@
                                   VerticalScrollBarVisibility="Disabled"
                                   PanningMode="HorizontalOnly">
                         <StackPanel x:Name="AppListPanel" Orientation="Horizontal">
-                            <!-- App cards will be added dynamically -->
+                            <!-- Capture Window Button (Crosshair) -->
+                            <Button x:Name="CaptureWindowBtn"
+                                    Style="{StaticResource AddAppButtonStyle}"
+                                    Width="80" Height="80"
+                                    Margin="4"
+                                    ToolTip="Drag and drop onto a window to embed it"
+                                    PreviewMouseLeftButtonDown="CaptureWindowBtn_PreviewMouseLeftButtonDown"
+                                    PreviewMouseMove="CaptureWindowBtn_PreviewMouseMove"
+                                    PreviewMouseLeftButtonUp="CaptureWindowBtn_PreviewMouseLeftButtonUp"
+                                    Cursor="Cross">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False">
+                                    <TextBlock Text="🎯"
+                                               FontSize="24"
+                                               HorizontalAlignment="Center" />
+                                    <TextBlock Text="Capture"
+                                               FontSize="10"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,2,0,0" />
+                                </StackPanel>
+                            </Button>
 
                             <!-- Add App Button (always last) -->
                             <Button x:Name="AddAppButton"

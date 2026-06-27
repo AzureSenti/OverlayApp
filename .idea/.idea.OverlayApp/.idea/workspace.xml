@@ -7,7 +7,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d1524f3-c886-4dec-8ee2-9c32389d1f67" name="Changes" comment="" />
+    <list default="true" id="1d1524f3-c886-4dec-8ee2-9c32389d1f67" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OverlayApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OverlayApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/Models/AppEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/Models/AppEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/ref/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/ref/OverlayApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/refint/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/refint/OverlayApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/rider.project.model.nuget.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,13 +46,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AzureSenti&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AzureSenti/OverlayApp.git&quot;,
+    &quot;accountId&quot;: &quot;f6c4fc95-9e5b-475b-ac2c-521bb8152882&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3Fjfw39UbsR59mZG1u823TZI5Wn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,6 +76,7 @@
     ".NET Project.OverlayApp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,13 +119,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782593634616</updated>
-      <workItem from="1782593635863" duration="3048000" />
+      <workItem from="1782593635863" duration="3898000" />
+      <workItem from="1782599591849" duration="675000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

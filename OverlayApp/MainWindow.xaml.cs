@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms.Integration;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
@@ -231,7 +232,7 @@ public partial class MainWindow : Window
     private void RebuildAppList()
     {
         var toRemove = AppListPanel.Children.OfType<WpfButton>()
-            .Where(b => b != AddAppButton)
+            .Where(b => b != AddAppButton && b != CaptureWindowBtn)
             .ToList();
 
         foreach (var btn in toRemove)
@@ -240,7 +241,8 @@ public partial class MainWindow : Window
         foreach (var app in _settings.Apps)
         {
             var card = CreateAppCard(app);
-            int insertIndex = AppListPanel.Children.IndexOf(AddAppButton);
+            int insertIndex = AppListPanel.Children.IndexOf(CaptureWindowBtn);
+            if (insertIndex < 0) insertIndex = AppListPanel.Children.IndexOf(AddAppButton);
             AppListPanel.Children.Insert(insertIndex, card);
         }
     }
@@ -310,6 +312,22 @@ public partial class MainWindow : Window
 
         menu.Items.Add(new Separator());
 
+        var toggleProfile = new MenuItem 
+        { 
+            Header = app.UseIsolatedProfile ? "✅ Use Isolated Profile (Data Separation)" : "❌ Use Isolated Profile (Data Separation)",
+            ToolTip = "If enabled, browsers and electron apps will use an isolated profile to avoid conflicts."
+        };
+        toggleProfile.Click += (s, e) => 
+        {
+            app.UseIsolatedProfile = !app.UseIsolatedProfile;
+            SaveSettings();
+            RebuildAppList(); // To refresh the context menu state
+            SetStatus($"Isolated Profile for {app.Name}: {(app.UseIsolatedProfile ? "Enabled" : "Disabled")}");
+        };
+        menu.Items.Add(toggleProfile);
+
+        menu.Items.Add(new Separator());
+
         var openFolder = new MenuItem { Header = "📂 Open Folder" };
         openFolder.Click += (s, e) =>
         {
@@ -372,6 +390,87 @@ public partial class MainWindow : Window
         {
             LaunchOrCaptureAndEmbed(app);
         }
+    }
+
+    // ===================================================================
+    // CROSSHAIR WINDOW CAPTURE
+    // ===================================================================
+
+    private bool _isCapturingWindow = false;
+
+    private void CaptureWindowBtn_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        _isCapturingWindow = true;
+        Mouse.Capture(CaptureWindowBtn);
+        Cursor = System.Windows.Input.Cursors.Cross;
+        SetStatus("🎯 Drag crosshair to a target window and release...");
+    }
+
+    private void CaptureWindowBtn_PreviewMouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+    {
+        if (_isCapturingWindow)
+        {
+            // Optional: highlight window under cursor could go here
+        }
+    }
+
+    private void CaptureWindowBtn_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+    {
+        if (!_isCapturingWindow) return;
+
+        _isCapturingWindow = false;
+        Mouse.Capture(null);
+        Cursor = System.Windows.Input.Cursors.Arrow;
+
+        var pt = GetCursorPos();
+        IntPtr targetHwnd = WindowCaptureHelper.GetRootWindowFromPoint(pt.X, pt.Y);
+
+        if (targetHwnd == IntPtr.Zero)
+        {
+            SetStatus("❌ No window captured.");
+            return;
+        }
+
+        var helper = new WindowInteropHelper(this);
+        if (targetHwnd == helper.Handle)
+        {
+            SetStatus("❌ Cannot embed OverlayApp into itself.");
+            return;
+        }
+
+        string title = WindowCaptureHelper.GetWindowTitle(targetHwnd);
+        int pid = WindowCaptureHelper.GetProcessIdFromWindow(targetHwnd);
+
+        if (string.IsNullOrWhiteSpace(title)) title = $"Window: {targetHwnd}";
+
+        try
+        {
+            var proc = Process.GetProcessById(pid);
+            
+            var app = new AppEntry
+            {
+                Name = title,
+                ExePath = proc.MainModule?.FileName ?? ""
+            };
+
+            EmbedExistingWindow(app, targetHwnd);
+        }
+        catch (Exception)
+        {
+            // If we can't access process module due to permissions, just embed it anyway
+            var fallbackApp = new AppEntry { Name = title, ExePath = "" };
+            EmbedExistingWindow(fallbackApp, targetHwnd);
+        }
+    }
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
+    private static extern bool GetCursorPos(out WindowCaptureHelper.POINT lpPoint);
+
+    private WindowCaptureHelper.POINT GetCursorPos()
+    {
+        GetCursorPos(out var p);
+        return p;
     }
 
     // ===================================================================
@@ -551,8 +650,10 @@ public partial class MainWindow : Window
         int width = (int)Math.Max(formsHost.ActualWidth, 400);
         int height = (int)Math.Max(formsHost.ActualHeight, 300);
 
+        string finalArgs = ProfileInjectorHelper.GetLaunchArguments(app);
+
         bool success = await embedder.LaunchAndEmbed(
-            app.ExePath, app.Arguments, hostHandle, width, height);
+            app.ExePath, finalArgs, hostHandle, width, height);
 
         if (success)
         {
@@ -581,10 +682,12 @@ public partial class MainWindow : Window
     {
         try
         {
+            string finalArgs = ProfileInjectorHelper.GetLaunchArguments(app);
+
             Process.Start(new ProcessStartInfo
             {
                 FileName = app.ExePath,
-                Arguments = app.Arguments,
+                Arguments = finalArgs,
                 UseShellExecute = true
             });
             SetStatus($"🚀 Launched: {app.Name}");

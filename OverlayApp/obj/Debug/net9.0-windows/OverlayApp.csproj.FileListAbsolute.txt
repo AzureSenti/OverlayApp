@@ -31,3 +31,4 @@ D:\Projects\C#\OverlayApp\OverlayApp\bin\Debug\net9.0-windows\Microsoft.Web.WebV
 D:\Projects\C#\OverlayApp\OverlayApp\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.WinForms.xml
 D:\Projects\C#\OverlayApp\OverlayApp\bin\Debug\net9.0-windows\Microsoft.Web.WebView2.Wpf.xml
 D:\Projects\C#\OverlayApp\OverlayApp\obj\Debug\net9.0-windows\OverlayApp.csproj.Up2Date
+D:\Projects\C#\OverlayApp\OverlayApp\obj\Debug\net9.0-windows\OverlayApp.sourcelink.json

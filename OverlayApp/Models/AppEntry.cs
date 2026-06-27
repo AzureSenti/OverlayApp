@@ -24,4 +24,10 @@ public class AppEntry
     /// Unique identifier for this entry.
     /// </summary>
     public string Id { get; set; } = Guid.NewGuid().ToString("N");
+
+    /// <summary>
+    /// Whether to force the app to use an isolated data profile.
+    /// Helpful for browsers and Electron apps to avoid single-instance conflicts.
+    /// </summary>
+    public bool UseIsolatedProfile { get; set; } = true;
 }
