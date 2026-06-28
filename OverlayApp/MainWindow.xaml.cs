@@ -67,7 +67,7 @@ public partial class MainWindow : Window
         var fadeIn = (Storyboard)FindResource("FadeIn");
         fadeIn.Begin();
 
-        SetStatus("Ready — Press Ctrl+Space to toggle overlay");
+        SetStatus("Ready");
     }
 
     private void ApplySettings()
@@ -91,7 +91,6 @@ public partial class MainWindow : Window
         {
             string modText = _settings.HotkeyModifier.ToString().Replace(",", " +");
             string keyText = _settings.HotkeyKey.ToString();
-            HotkeyHintText.Text = $"{modText} + {keyText} to toggle";
         }
     }
 
@@ -257,21 +256,12 @@ public partial class MainWindow : Window
 
         var iconImage = new WpfImage
         {
-            Width = 24,
-            Height = 24,
+            Width = 16,
+            Height = 16,
             Margin = new Thickness(0, 0, 0, 4),
             Source = icon ?? CreateDefaultIcon()
         };
-
-        var nameText = new TextBlock
-        {
-            Text = TruncateName(app.Name, 10),
-            FontSize = 10,
-            Foreground = (WpfBrush)FindResource("TextBrush"),
-            HorizontalAlignment = WpfHorizontalAlignment.Center,
-            TextTrimming = TextTrimming.CharacterEllipsis,
-            MaxWidth = 68
-        };
+        
 
         var stack = new StackPanel
         {
@@ -279,13 +269,12 @@ public partial class MainWindow : Window
             VerticalAlignment = VerticalAlignment.Center
         };
         stack.Children.Add(iconImage);
-        stack.Children.Add(nameText);
 
         var btn = new WpfButton
         {
             Style = (Style)FindResource("AppCardStyle"),
-            Width = 60,
-            Height = 60,
+            Width = 40,
+            Height = 40,
             Margin = new Thickness(4),
             Content = stack,
             Tag = app,

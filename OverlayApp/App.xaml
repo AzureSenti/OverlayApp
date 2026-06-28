@@ -220,8 +220,8 @@
                 <Setter Property="CaretBrush" Value="{StaticResource TextBrush}" />
                 <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
                 <Setter Property="BorderThickness" Value="1" />
-                <Setter Property="Padding" Value="12,10" />
-                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Padding" Value="6,5" />
+                <Setter Property="FontSize" Value="12" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="TextBox">
@@ -235,8 +235,8 @@
                                     <TextBlock x:Name="Placeholder"
                                                Text="🔍  Search incognito... (Enter)"
                                                Foreground="{StaticResource TextSecondaryBrush}"
-                                               Padding="14,11"
-                                               FontSize="14"
+                                               Padding="7,6"
+                                               FontSize="12"
                                                IsHitTestVisible="False"
                                                Visibility="Collapsed" />
                                 </Grid>

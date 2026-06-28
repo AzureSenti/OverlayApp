@@ -9,21 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1d1524f3-c886-4dec-8ee2-9c32389d1f67" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OverlayApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OverlayApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/App.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/bin/Debug/net9.0-windows/OverlayApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverlayApp/Models/AppSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/Models/AppSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/OverlayApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/ref/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/ref/OverlayApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/refint/OverlayApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OverlayApp/obj/Debug/net9.0-windows/refint/OverlayApp.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +44,9 @@
     &quot;accountId&quot;: &quot;f6c4fc95-9e5b-475b-ac2c-521bb8152882&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/OverlayApp/Models/AppEntry.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -71,6 +65,7 @@
     &quot;.NET Project.OverlayApp.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -116,6 +111,12 @@
       <updated>1782593634616</updated>
       <workItem from="1782593635863" duration="3898000" />
       <workItem from="1782599591849" duration="2404000" />
+      <workItem from="1782602208890" duration="241000" />
+      <workItem from="1782602605177" duration="114000" />
+      <workItem from="1782603762167" duration="234000" />
+      <workItem from="1782604219801" duration="329000" />
+      <workItem from="1782604905992" duration="266000" />
+      <workItem from="1782627589201" duration="635000" />
     </task>
     <task id="LOCAL-00001" summary="Fix Overlay">
       <option name="closed" value="true" />
@@ -125,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782600431155</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix xml">
+      <option name="closed" value="true" />
+      <created>1782602247955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782602247955</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1782602422686</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782602422686</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +153,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Fix Overlay" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Overlay" />
+    <MESSAGE value="Fix xml" />
+    <MESSAGE value="Add file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

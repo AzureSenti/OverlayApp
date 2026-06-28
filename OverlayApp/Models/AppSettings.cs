@@ -35,7 +35,7 @@ public class AppSettings
     /// <summary>
     /// Hotkey virtual key.
     /// </summary>
-    public Key HotkeyKey { get; set; } = Key.Space;
+    public Key HotkeyKey { get; set; } = Key.M;
 
     /// <summary>
     /// List of registered applications.

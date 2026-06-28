@@ -148,33 +148,12 @@
                                    FontWeight="SemiBold"
                                    VerticalAlignment="Center" />
                     </StackPanel>
-
-                    <!-- Hotkey hint -->
-                    <TextBlock Grid.Column="1"
-                               x:Name="HotkeyHintText"
-                               Text="Ctrl + Space to toggle"
-                               Foreground="{StaticResource TextSecondaryBrush}"
-                               FontSize="11"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Opacity="0.6" />
-
-                    <!-- Window Controls -->
-                    <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="0,0,6,0">
-                        <Button Style="{StaticResource TitleBarButton}" Click="MinimizeButton_Click"
-                                ToolTip="Minimize">
-                            <TextBlock Text="─" FontSize="12" />
-                        </Button>
-                        <Button Style="{StaticResource CloseButton}" Click="CloseButton_Click"
-                                ToolTip="Close">
-                            <TextBlock Text="✕" FontSize="12" />
-                        </Button>
-                    </StackPanel>
+                    
                 </Grid>
             </Border>
 
             <!-- ===== SEARCH BAR ===== -->
-            <Border Grid.Row="1" Padding="14,5,14,0">
+            <Border Grid.Row="1" Padding="14,7,14,0">
                 <TextBox x:Name="SearchBox"
                          Style="{StaticResource SearchTextBoxStyle}"
                          KeyDown="SearchBox_KeyDown"
@@ -188,15 +167,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-
-                    <!-- Section Header -->
-                    <TextBlock Grid.Row="0"
-                               Text="📁 Applications"
-                               Foreground="{StaticResource TextSecondaryBrush}"
-                               FontSize="12"
-                               FontWeight="SemiBold"
-                               Margin="0,0,0,4" />
-
+                    
                     <!-- App Cards Scroll -->
                     <ScrollViewer Grid.Row="1"
                                   HorizontalScrollBarVisibility="Auto"
@@ -206,7 +177,7 @@
                             <!-- Capture Window Button (Crosshair) -->
                             <Button x:Name="CaptureWindowBtn"
                                     Style="{StaticResource AddAppButtonStyle}"
-                                    Width="60" Height="60"
+                                    Width="40" Height="40"
                                     Margin="2"
                                     ToolTip="Drag and drop onto a window to embed it"
                                     PreviewMouseLeftButtonDown="CaptureWindowBtn_PreviewMouseLeftButtonDown"
@@ -217,17 +188,14 @@
                                     <TextBlock Text="🎯"
                                                FontSize="12"
                                                HorizontalAlignment="Center" />
-                                    <TextBlock Text="Capture"
-                                               FontSize="12"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,2,0,0" />
+
                                 </StackPanel>
                             </Button>
 
                             <!-- Add App Button (always last) -->
                             <Button x:Name="AddAppButton"
                                     Style="{StaticResource AddAppButtonStyle}"
-                                    Width="60" Height="60"
+                                    Width="40" Height="40"
                                     Margin="4"
                                     Click="AddApp_Click"
                                     ToolTip="Add application (.exe)">
@@ -236,10 +204,6 @@
                                                FontSize="22"
                                                FontWeight="Light"
                                                HorizontalAlignment="Center" />
-                                    <TextBlock Text="Add"
-                                               FontSize="10"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,-2,0,0" />
                                 </StackPanel>
                             </Button>
                         </StackPanel>
